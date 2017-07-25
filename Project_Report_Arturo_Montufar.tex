@@ -1,5 +1,8 @@
 % Embedded Systems Project Report
 
+% Preamble: contains document parameters, like font size, document class, paper size, page layout, etc.
+% Some of the packaged needed by the template provided must be installed using MikTex package manager
+
 \documentclass[12pt, english]{scrartcl}
 \usepackage[a4paper,bindingoffset=0.2in,left=.5in,right=.5in,top=1in,bottom=1in,footskip=.5in]{geometry}
 \usepackage[english]{babel}
@@ -24,6 +27,8 @@
 \usepackage[linesnumbered]{algorithm2e}
 \usepackage{multirow}
 \usepackage{multicol}
+\usepackage{subcaption}
+\usepackage{float}
 
 \usepackage{prettyref}
 \newrefformat{fig}{Figure~\ref{#1}}
@@ -56,7 +61,7 @@
 \textsc{Politecnico di Milano - Department of Electronics, Information and Bioengineering} \\[1cm]
 \includegraphics[scale=1.2]{polimi} \\[1cm]
 \horrule{0.5pt} \\[0.4cm]
-\huge \textbf Porting of Miosix OS to a Vehicle Electronic Speed Control Board \\[.5cm] % The assignment title
+\huge \textbf Porting of Miosix OS into a Vehicle Electronic Speed Control Board for Permanent Magnet Alternating Current Motors \\[.5cm] % The assignment title
 \large Coding Project \\ % Pick one: Monography and Coding Project
 \horrule{2pt} \\[0.5cm]
 \vfill
@@ -74,20 +79,17 @@
 
 
 
-\begin{document}
+\begin{document} % Anything between \begin{} and \end{} is called "environment"
 
-\maketitle % Print the title
+	\maketitle % Print the title
 
-\pagebreak\tableofcontents\pagebreak
+	\pagebreak\tableofcontents\pagebreak
 
-% UNCOMMENT only if monography
-%\input{text/monography}
+	\input{text/coding}
 
-% UNCOMMENT only if coding project
-\input{text/coding}
+	\pagebreak
 
-\pagebreak
-\bibliographystyle{unsrt}
-\bibliography{text/project_bibliography}
+	\bibliographystyle{unsrt}
+	\bibliography{text/project_bibliography}
 
 \end{document}
